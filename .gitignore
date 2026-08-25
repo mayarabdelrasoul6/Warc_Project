@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.cache/
+.hf_cache/
+*.warc.gz
+*.bin
+venv/
