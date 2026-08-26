@@ -150,7 +150,7 @@ def save_batch_records(records_list, conn=None):
         SET url = EXCLUDED.url
         RETURNING warc_record_id, id;
         """
-        execute_values(cur, insert_pages_query, pages_tuples, fetch=True)
+    
         inserted_pages = execute_values(cur, insert_pages_query, pages_tuples, fetch=True)   
         page_id_map = {rec_id: p_id for rec_id, p_id in inserted_pages}
 
