@@ -39,3 +39,8 @@ It does not:
 
 ## Used by
 Standalone script — run directly (`python stream_pipeline.py`). Not imported by anything else in the project.
+<img width="1248" height="823" alt="image" src="https://github.com/user-attachments/assets/62e63bc6-5ef5-4db8-a138-d0468fd47d63" />
+<img width="1272" height="756" alt="image" src="https://github.com/user-attachments/assets/b60803af-fb37-44cd-a77d-5fd278fc2146" />
+<img width="1266" height="763" alt="image" src="https://github.com/user-attachments/assets/102a3423-38e8-483d-9c06-3cb8fb14574f" />
+
+
