@@ -37,7 +37,7 @@ def run_detailed_benchmark(benchmark_name: str, parser_fn, extractor_fn=None):
                     
                     
                     words = extracted["word_count"]
-                    chars = extracted["text_length"]
+                    chars = extracted.get("text_length", extracted.get("char_count", 0))
 
                     if words < 20 and chars < 100:
                         skipped += 1
