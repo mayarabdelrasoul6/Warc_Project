@@ -9,7 +9,10 @@ It does not:
 - Touch the database (see `db/db_handler.py`)
 
 It only knows how to turn one (or many) raw HTML records into structured metadata + text.
+Two extraction modes are provided:
 
+Batched mode (used by the optimized DB streaming pipeline): HTML parsing (extract_html_fields) is separated from language/dialect detection (detect_languages_batch / detect_dialects_batch), so the HF models can be run once per batch of records instead of once per record.
+Single-record mode (extract_selectolax): HTML parsing + language + dialect detection all in one call. Used by scripts that process one record at a time (e.g. the CC-NEWS preview script).
 ## Dependencies
 - **selectolax** — fast HTML parser (`HTMLParser`). Used by the main extraction functions.
 - **beautifulsoup4 (bs4) + lxml** — used only by the legacy/benchmark `extract_bs4_lxml`.
